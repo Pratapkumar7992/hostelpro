@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Issue Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay loop muted class="background-video">
+        <source src="{{ url_for('static', filename='picture/university.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="{{ url_for('static', filename='picture/images.png') }}" alt="Logo" class="logo">
+        </div>        
+        <div class="navbar-center">
+            <a href="#info">Info</a>
+            <a href="{{ url_for('facility') }}">Facility</a>
+            <a href="#complain">Complain</a>
+            <a href="{{ url_for('resolve_issues') }}">Resolve Complain</a>
+        </div>
+    </nav>
+
+    <!-- Main Content with Student and Admin sections -->
+    <div class="main-content">
+        <div class="login-section student-section">
+            <img src="{{ url_for('static', filename='picture/student login.jpg') }}" alt="Student Login" class="login-image">
+            <button class="login-button" onclick="window.location.href='{{ url_for('student_login') }}'">Student Login</button>
+        </div>
+        <div class="login-section admin-section">
+            <img src="{{ url_for('static', filename='picture/admin.jpg') }}" alt="Admin Login" class="login-image">
+            <button class="login-button" onclick="redirectToAdminLogin()">Admin Login</button>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to the admin login page
+        function redirectToAdminLogin() {
+            window.location.href = "{{ url_for('admin_login') }}";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-left .logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-center a:hover {
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    color: aquamarine;
+}
+
+.navbar-right .admin-icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main content styling */
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.story-button {
+    margin: 0 10px;
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.story-button:hover {
+    background-color: aqua;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+/* Background Video Styles */
+.background-video {
+    position: fixed; /* Make the video fixed to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+    z-index: -1; /* Place the video behind the content */
+}
+
+/* Navbar and other styles */
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Content and Flash Messages */
+.main-content {
+    position: relative;
+    z-index: 2;
+}
+
+.flash-messages {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "issue_type": "general",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "211",
+        "issue_description": "i have problem of water in front of room number 211"
+    },
+    {
+        "issue_type": "light",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "light_issue": "i have light problem in room number 121"
+    },
+    {
+        "issue_type": "lock",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "lock_reason": "lock issues i have in the room number 121"
+    },
+    {
+        "issue_type": "food_quality",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "food_quality_issue": "i have this issue"
+    },
+    {
+        "issue_type": "lock",
+        "name": "jain",
+        "email": "23mcmc34@uohyd.ac.in",
+        "room_number": "126",
+        "lock_reason": "water linkage problem"
+    },
+    {
+        "issue_type": "general",
+        "name": "arvind",
+        "email": "23mcmc22@uohyd.ac.in",
+        "room_number": "222",
+        "issue_description": "water likage from wall"
+    },
+    {
+        "issue_type": "general",
+        "name": "anshul",
+        "email": "23mcmc26@uohyd.ac.in",
+        "room_number": "129",
+        "issue_description": "machar kate h study room pr"
+    },
+    {
+        "issue_type": "general",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "issue_description": "water likage from wall"
+    }
+]

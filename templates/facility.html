@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Facilities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hostel Facilities</h1>
+        <p>Here are all the facilities offered at our hostel to ensure a comfortable and pleasant stay.</p>
+    </header>
+
+    <main>
+        <section class="facilities">
+            <div class="facility-card" id="wifi">
+                <img src="static/picture/istockphoto-1166056171-612x612.jpg" alt="Wi-Fi" width="100" height="100">
+                <h3>Wi-Fi</h3>
+                <p>Enjoy high-speed internet access throughout the hostel with 24/7 connectivity.</p>
+                <button onclick="showDetails('wifi')">See More</button>
+            </div>
+            <div class="facility-card" id="laundry">
+                <img src="static/picture/top-10-laundry-service-apps.png" alt="Laundry" width="100" height="100">
+                <h3>Laundry Service</h3>
+                <p>We offer self-service laundry facilities, with washing machines and dryers available.</p>
+                <button onclick="showDetails('laundry')">See More</button>
+            </div>
+            <div class="facility-card" id="common-room">
+                <img src="static/picture/maxresdefault.jpg" alt="Common Room" width="100" height="100">
+                <h3>Common Room</h3>
+                <p>A cozy and welcoming space to relax, meet new people, or watch TV.</p>
+                <button onclick="showDetails('common-room')">See More</button>
+            </div>
+            <div class="facility-card" id="gym">
+                <img src="static/picture/premium_photo-1661581920957-4550cf2fe431.jpeg" alt="Gym" width="100" height="100">
+                <h3>Gym</h3>
+                <p>Our well-equipped gym will help you stay fit and healthy during your stay.</p>
+                <button onclick="showDetails('gym')">See More</button>
+            </div>
+            <div class="facility-card" id="security">
+                <img src="static/picture/images1.jpeg" alt="Security" width="100" height="100">
+                <h3>24/7 Security</h3>
+                <p>Our hostel is secured with surveillance and security personnel around the clock.</p>
+                <button onclick="showDetails('security')">See More</button>
+            </div>
+            <div class="facility-card" id="cafeteria">
+                <img src="static/picture/istockphoto-1411322814-612x612.jpg" alt="Cafeteria" width="100" height="100">
+                <h3>Cafeteria</h3>
+                <p>Enjoy delicious and healthy meals throughout the day at our in-house cafeteria.</p>
+                <button onclick="showDetails('cafeteria')">See More</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hostel Name | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showDetails(facility) {
+            let details;
+
+            switch(facility) {
+                case 'wifi':
+                    details = "High-speed Wi-Fi available in all rooms and common areas. Stay connected with seamless internet service.";
+                    break;
+                case 'laundry':
+                    details = "Laundry services are available with modern washing machines and dryers. The service is self-operated, making it convenient for all.";
+                    break;
+                case 'common-room':
+                    details = "The common room offers a comfortable space with sofas, TV, games, and a perfect environment to meet other guests.";
+                    break;
+                case 'gym':
+                    details = "Our hostel includes a fully equipped gym for your fitness needs. Open 24 hours, ensuring flexibility for your workout schedule.";
+                    break;
+                case 'security':
+                    details = "Your safety is our priority. The hostel is equipped with 24/7 security personnel and surveillance cameras.";
+                    break;
+                case 'cafeteria':
+                    details = "The cafeteria serves nutritious meals every day. Options include vegetarian, non-vegetarian, and international cuisine.";
+                    break;
+                default:
+                    details = "More information about the facility will be available soon.";
+            }
+
+            alert(details);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Center the form on the page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4f67ff, #8cffa0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style the card container */
+form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Labels and inputs styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input hover and focus effect */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+/* Error message styling */
+p {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.admin{
+    margin: 10px;
+}

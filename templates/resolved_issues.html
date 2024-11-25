@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolved Issues</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .resolved-issues {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .issue-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .issue-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .issue-card h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        .issue-card p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .issue-card strong {
+            color: #333;
+        }
+
+        .issue-card .row {
+            margin-bottom: 10px;
+        }
+
+        .issue-card .row:last-child {
+            margin-bottom: 0;
+        }
+
+        .hr-divider {
+            margin: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Resolved Issues</h2>
+    
+    <!-- Display list of resolved issues -->
+    <div class="resolved-issues">
+        {% if resolved_issues %}
+            {% for issue in resolved_issues %}
+                <div class="issue-card">
+                    <h3>{{ issue['issue_type'] }}</h3>
+                    <div class="row">
+                        <strong>Name:</strong> {{ issue['name'] }}
+                    </div>
+                    <div class="row">
+                        <strong>Email:</strong> {{ issue['email'] }}
+                    </div>
+                    <div class="row">
+                        <strong>Room Number:</strong> {{ issue['room_number'] }}
+                    </div>
+                    <div class="hr-divider"></div>
+                    <div class="row">
+                        <strong>Description:</strong> 
+                        {% if issue.get('issue_description') %}
+                            {{ issue['issue_description'] }}
+                        {% elif issue.get('lock_reason') %}
+                            {{ issue['lock_reason'] }}
+                        {% elif issue.get('light_issue') %}
+                            {{ issue['light_issue'] }}
+                        {% elif issue.get('food_quality_issue') %}
+                            {{ issue['food_quality_issue'] }}
+                        {% elif issue.get('study_room_issue') %}
+                            {{ issue['study_room_issue'] }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No resolved issues.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

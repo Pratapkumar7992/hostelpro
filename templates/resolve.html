@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolved Issues</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_dashboard.css') }}">
+</head>
+<body>
+    <h2>Resolved Issues</h2>
+
+    <!-- Display flash messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Display list of resolved issues -->
+    <div class="issues">
+        {% if resolved_issues %}
+            <ul>
+                {% for issue in resolved_issues %}
+                    <li>
+                        <strong>Issue Type:</strong> {{ issue['issue_type'] }}<br>
+                        <strong>Name:</strong> {{ issue['name'] }}<br>
+                        <strong>Email:</strong> {{ issue['email'] }}<br>
+                        <strong>Room Number:</strong> {{ issue['room_number'] }}<br>
+                        <strong>Description:</strong> 
+                        {% if issue.get('issue_description') %}
+                            {{ issue['issue_description'] }}
+                        {% elif issue.get('lock_reason') %}
+                            {{ issue['lock_reason'] }}
+                        {% elif issue.get('light_issue') %}
+                            {{ issue['light_issue'] }}
+                        {% elif issue.get('food_quality_issue') %}
+                            {{ issue['food_quality_issue'] }}
+                        {% elif issue.get('study_room_issue') %}
+                            {{ issue['study_room_issue'] }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No resolved issues found.</p>
+        {% endif %}
+    </div>
+
+    <!-- Button to go back to index.html -->
+    <form action="{{ url_for('index') }}" method="get">
+        <button type="submit">Back to Home</button>
+    </form>
+
+</body>
+</html>

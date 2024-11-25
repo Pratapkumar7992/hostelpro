@@ -1,0 +1,161 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4f67ff, #8cffa0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding for smaller screens */
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #004aad; /* Dark blue */
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Issues container */
+.issues {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Individual issue card */
+.issues ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.issues li {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #004aad; /* Dark blue border accent */
+}
+
+/* Card hover effect */
+.issues li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-left-color: #0083ff; /* Lighter blue on hover */
+}
+
+/* Separator line between issues */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Issue content styling */
+.issues strong {
+    color: #004aad; /* Dark blue for labels */
+    font-weight: 600;
+}
+
+/* Additional styling for text inside cards */
+.issues li p, .issues li br {
+    margin: 5px 0;
+    color: #555;
+}
+
+.issues li span {
+    color: #333; /* Text color */
+}
+
+/* No issues message */
+.issues p {
+    color: #666;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Highlighting specific data fields */
+.issues li span.issue-type {
+    color: #ff6600; /* Orange for issue types */
+    font-weight: bold;
+}
+
+.issues li span.additional-info {
+    color: #0083ff; /* Lighter blue for additional info */
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+
+.home-button button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home-button button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .issues {
+        max-width: 100%;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .home-button {
+        top: 10px;
+        right: 10px;
+    }
+
+    .home-button button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .issues li {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .home-button button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .issues li {
+        padding: 10px;
+    }
+
+    .issues p {
+        font-size: 14px;
+    }
+}

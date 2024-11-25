@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="issue-selection-container">
+        <h2>Select an Issue to Report</h2>
+        <button class="story-button" onclick="window.location.href='{{ url_for('lock_issues') }}'">LOCK ISSUES</button>
+        <button class="story-button" onclick="window.location.href='{{ url_for('water_issue') }}'">WATER ISSUE</button>
+        <button class="story-button" onclick="window.location.href='{{ url_for('light_issue') }}'">LIGHT ISSUE</button>
+        <button class="story-button" onclick="window.location.href='{{ url_for('food_quality_issue') }}'">FOOD QUALITY</button>
+        <button class="story-button" onclick="window.location.href='{{ url_for('study_room_issue') }}'">STUDY ROOM ISSUES</button>
+    </div>
+</body>
+</html>

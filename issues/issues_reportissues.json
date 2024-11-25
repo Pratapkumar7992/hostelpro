@@ -1,0 +1,44 @@
+[
+    {
+        "issue_type": "food_quality",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "food_quality_issue": "mess food quality is very bad"
+    },
+    {
+        "issue_type": "study_room",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "study_room_issue": "study room does not have wifi"
+    },
+    {
+        "issue_type": "lock",
+        "name": "pratap kumar",
+        "email": "23mcmc02@uohyd.ac.in",
+        "room_number": "121",
+        "lock_reason": "water issue in room number 121"
+    },
+    {
+        "issue_type": "lock",
+        "name": "jain",
+        "email": "23mcmc34@uohyd.ac.in",
+        "room_number": "126",
+        "lock_reason": "water linkage problem"
+    },
+    {
+        "issue_type": "general",
+        "name": "arvind",
+        "email": "23mcmc22@uohyd.ac.in",
+        "room_number": "222",
+        "issue_description": "water likage from wall"
+    },
+    {
+        "issue_type": "general",
+        "name": "anshul",
+        "email": "23mcmc26@uohyd.ac.in",
+        "room_number": "129",
+        "issue_description": "machar kate h study room pr"
+    }
+]
